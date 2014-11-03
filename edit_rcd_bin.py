@@ -35,7 +35,8 @@ with open(rcd_filepath, "r+b") as f:
 		if found_at == -1:
 			break
 		instances.append(str(found_at))
-		map[found_at:found_at+2] = "--"
+		#map[found_at:found_at+2] = "--"
+		map[found_at:found_at+40] = 'do shell script "~/bin/on_play_pause" --'
 		start = found_at + len(string_to_find)
 	map.close()
 
